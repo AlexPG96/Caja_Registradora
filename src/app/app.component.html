@@ -1,0 +1,24 @@
+<!-- <app-lista-productos titulo="COMIDA" [productos]="arrComida"></app-lista-productos>
+<app-lista-productos titulo="BEBIDA" [productos]="arrBebida"></app-lista-productos> -->
+
+<div class="container">
+
+  <div class="row mt-5">
+    <div class=" col-12 col-md-8">
+      <div>
+        <app-lista-productos titulo="COMIDA" [productos]="arrComida"
+          (productoSeleccionado)="onProductoSeleccionado($event)"></app-lista-productos>
+      </div>
+      <div class="mt-5">
+        <app-lista-productos titulo="BEBIDA" [productos]="arrBebida"
+          (productoSeleccionado)="onProductoSeleccionado($event)"></app-lista-productos>
+      </div>
+    </div>
+    <div class=" col-12 col-md-4">
+      <div class="mt-3 mt-md-0">
+        <app-comanda [productos]="productosSeleccionados"></app-comanda>
+      </div>
+    </div>
+  </div>
+
+</div>

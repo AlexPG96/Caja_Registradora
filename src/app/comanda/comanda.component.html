@@ -1,0 +1,8 @@
+<p>TOTAL: {{calcularTotal()}}</p>
+<ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between" *ngFor="let producto of productos; let indice = index;">
+        {{producto.descripcion()}} {{(producto.cantidad > 1) ? (' x '+ producto.cantidad) : ('')}}
+        <button class="btn btn-sm btn-danger" (click)="onClickBorrar(indice)">Borrar</button>
+    </li>
+
+</ul>

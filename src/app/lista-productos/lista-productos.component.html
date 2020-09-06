@@ -1,0 +1,13 @@
+<div class="lista-productos">
+    <div class="row">
+        <h3>{{titulo}}</h3>
+    </div>
+    <div class="row">
+        <div class="col-3" *ngFor="let producto of productos">
+            <div (click)="onClick(producto)">
+                <img [src]="producto.imagen">
+                <p>{{producto.descripcion()}}</p>
+            </div>
+        </div>
+    </div>
+</div>
